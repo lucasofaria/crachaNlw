@@ -1,7 +1,6 @@
 const linksSocialMedia = {
   github: 'lucasofaria',
-  youtube: 'UCnl5V2JxJkgvP4ETMcfOhtQ',
-  facebook: 'profile.php?id=100000973919106',
+  linkedin: 'in/lucas-oliveira-farias/',
   instagram: 'lucas.oli_',
   twitter: 'lucas_oli'
 }
@@ -22,9 +21,9 @@ function getGitHubProfileInfos() {
     .then(response => response.json())
     .then(data => {
       userName.textContent = data.name
-      userBio.textContent = data.bio
+      userBio.textContent = data.bio,
       userLink.href = data.html_url
-      UserImage.src = data.avatar_url
+      userImage.src = data.avatar_url
       userLogin.textContent = data.login
     })
 }
